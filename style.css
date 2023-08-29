@@ -128,11 +128,9 @@ header .navigation_list{
 }
 .button1 a{
   text-decoration: none;
-  color: var(--text);
-  font-size: 20px;
-  font-weight: 600;
+  color: white;
+  font-size: 15px;
   padding-top: 10px;
-  padding-left: 20px;
 }
 .button1:hover{
   background-color: var(--primary);
