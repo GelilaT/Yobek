@@ -115,3 +115,9 @@ section {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+@media (min-width: 768px) {
+  .row-md {
+    flex-direction: row;
+  }
+}
