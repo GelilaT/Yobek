@@ -1,38 +1,117 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #443f75;
+  --background: #ffffff;
+  --text: #443f75;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    background-color:white;
-    color: #313896;
-    line-height: 1.6em;
-    margin: 0; 
-    padding:0;
-    border: 0;
-} 
-#logo{
-    width: 100%;
-    background-color: #313896;
-    /* background: url(images/bg2.jpg) no-repeat center center; */
-    padding: 0;
-    top: 0;
-    left: 0;
-    z-index: 100;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.aboutus{
-    background-color: #b56916;
-    color: white;
-    padding: 50px;
+
+body {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: white;
+  color: #313896;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-.aboutus .about_us{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+#logo {
+  width: 100%;
+  background-color: #313896;
+  /* background: url(images/bg2.jpg) no-repeat center center; */
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
-.about_us_left{
-    width: 25%;
-    background-color: blueviolet;
+.aboutus {
+  background-color: #b56916;
+  color: white;
+  padding: 50px;
+}
+.aboutus .about_us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about_us_left {
+  width: 25%;
+  background-color: blueviolet;
+}
+
+#projects {
+  color: var(--primary);
+
+  font-size: 3.5rem;
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gap-5 {
+  gap: 5rem;
+}
+
+.vertical-spacer {
+  height: 10rem;
+}
+
+.project-section img {
+  width: 300px;
+  height: 400px;
+}
+
+section {
+  padding: 5rem;
+}
+
+.project-section .img-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project-section .img-container .caption {
+  font-weight: 900;
+  font-size: 2rem;
+  position: absolute;
+  top: 10%;
+  right: -30%;
+  line-height: 3rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
