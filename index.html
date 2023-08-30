@@ -11,58 +11,79 @@
   <body>
     <header id="logo">
       <div class="nav_container">
-          <h1 id="container__brand">YOBEK</h1>
-          <nav class="navigation">
-              <div class="navigation_list">
-                  <ul>
-                      <li class="navigation__list--link">
-                        <a class="navigation__list--first" href="index.html">HOME</a></li>
-                      <li class="navigation__list--link">
-                        <a class="navigation__list--other" href="#about">ABOUT</a></li>
-                      <li class="navigation__list--link">
-                        <a class="navigation__list--other" href="#projects">PROJECTS</a></li>
-                  </ul>  
-                  <ul>
-                      <li class="navigation__list--icon">
-                        <a class="navigation__list__icon--link" href="https://web.telegram.org/k/#@yonihomes">
-                        <i class="fa fa-telegram" aria-hidden="true"></i></a></li>
-                      <li class="navigation__list--icon">
-                        <a class="navigation__list__icon--link" href="https://www.facebook.com/yonatan.tefera.1">
-                        <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  </ul>
-              </div>
-          </nav>
+        <h1 id="container__brand">YOBEK</h1>
+        <nav class="navigation">
+          <div class="navigation_list">
+            <ul>
+              <li class="navigation__list--link">
+                <a class="navigation__list--first" href="index.html">HOME</a>
+              </li>
+              <li class="navigation__list--link">
+                <a class="navigation__list--other" href="#about">ABOUT</a>
+              </li>
+              <li class="navigation__list--link">
+                <a class="navigation__list--other" href="#projects">PROJECTS</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="navigation__list--icon">
+                <a
+                  class="navigation__list__icon--link"
+                  href="https://web.telegram.org/k/#@yonihomes"
+                >
+                  <i class="fa fa-telegram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="navigation__list--icon">
+                <a
+                  class="navigation__list__icon--link"
+                  href="https://www.facebook.com/yonatan.tefera.1"
+                >
+                  <i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-          <hr class="custom__line">
-          <section class="on_bg">
-              <div class="container">
-                  <h1>Making your realty dreams a reality</h1>
-                  <p>We are a property consulting company, we have been operating to help families, companies and individuals find the best housing for them.</p>
-                  <div class="opaque">
-                      <button class="button1"><a class="button__link" href="#footer_contact">CONTACT US</a></button>
-                  </div>
-              </div>
-          </section>
-  </header>
-  <section class="aboutus">
+      <hr class="custom__line" />
+      <section class="on_bg">
+        <div class="container">
+          <h1>Making your realty dreams a reality</h1>
+          <p>
+            We are a property consulting company, we have been operating to help
+            families, companies and individuals find the best housing for them.
+          </p>
+          <div class="opaque">
+            <button class="button1">
+              <a class="button__link" href="#footer_contact">CONTACT US</a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section class="aboutus">
       <div class="about_us">
-          <div class="about__left">
-              <h1 id="about">Why choose us?</h1>
-              <hr class="custom__line--about">
-              <img src="images/diamond.png" alt="a diamond shaped window">
-          </div>
-          <div class="about__mid">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
-              <h2>Company Professional</h2>
-              <p>We are a professional company based in Ethiopia and have assisted many clients.</p>
-          </div>
-          <div class="about__right">
-              <i class="fa fa-credit-card" aria-hidden="true"></i>
-              <h2>Buy</h2>
-              <p>We assist you in providing various assets that you can buy.</p>
-          </div>
+        <div class="about__left">
+          <h1 id="about">Why choose us?</h1>
+          <hr class="custom__line--about" />
+          <img src="images/diamond.png" alt="a diamond shaped window" />
+        </div>
+        <div class="about__mid">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <h2>Company Professional</h2>
+          <p>
+            We are a professional company based in Ethiopia and have assisted
+            many clients.
+          </p>
+        </div>
+        <div class="about__right">
+          <i class="fa fa-credit-card" aria-hidden="true"></i>
+          <h2>Buy</h2>
+          <p>We assist you in providing various assets that you can buy.</p>
+        </div>
       </div>
-  </section>
+    </section>
 
     <section class="project-section">
       <h1 id="projects">Our Projects</h1>
@@ -97,20 +118,20 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="color-shader"></div>
       <div class="footer-flex">
         <!-- Footer Column One -->
-        <div class="footer-column" id="col-one">
+        <div class="footer-column" id="col-one" style="position: relative; z-index: 10">
           <h2 class="footer-h2">Yobek</h2>
           <p class="footer-desc">
             Property consultant who focuses on client orientation in realizing
             dream homes
           </p>
         </div>
+        <div class="color-shader"></div>
 
         <!-- Footer Column Two -->
         <div class="footer-column">
-          <h2 class="footer-h2">CONTACT</h2>
+          <h2 class="footer-h2">Phone Numbers</h2>
 
           <a>+251 904638617</a>
           <a>+251 912150884</a>
@@ -123,25 +144,27 @@
           <form action="" class="contact-form">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" class="contact-input" />
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" class="contact-input" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="contact-input" />
             <label for="message">Message</label>
             <textarea
               name="message"
               id="message"
               cols="20"
-              rows="10"
+              rows="5"
+              class="scrollable-textarea"
             ></textarea>
           </form>
+          <button class="btn">Submit</button>
         </div>
       </div>
       <div>
-        <hr />
+        <hr style="position: relative; z-index: 10" />
 
         <!-- Footer Copyright -->
         <div class="copyright-row">
           <div>
-            <p>Copy rights &copy; 2023 Yobek Properties. All rights reserved</p>
+            <p style="position: relative; z-index: 10">Copy rights &copy; 2023 Yobek Properties. All rights reserved</p>
           </div>
 
           <div class="footer-icons">
