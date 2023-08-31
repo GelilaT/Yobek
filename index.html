@@ -141,11 +141,11 @@
 
         <div class="footer-column">
           <h2 id="footer_contact" class="footer-h2">Contact Us</h2>
-          <form action="" class="contact-form">
+          <form id="form"  class="contact-form">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" class="contact-input" />
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="contact-input" />
+            <label for="email">Phone Number</label>
+            <input type="" name="email" id="email" class="contact-input" />
             <label for="message">Message</label>
             <textarea
               name="message"
@@ -154,8 +154,11 @@
               rows="5"
               class="scrollable-textarea"
             ></textarea>
+            <button type="submit" class="btn">Send</button>
           </form>
-          <button class="btn">Send</button>
+          <div class="hidden message">
+            <p>Message sent successfully.</p>
+          </div>
         </div>
       </div>
       <div>
@@ -179,4 +182,39 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    function submit(e){
+      console.log('sd')
+      console.log(JSON.stringify({name: document.getElementById('name').value, 
+        email: document.getElementById('email').value, 
+        message: document.getElementById('message').value
+      }))
+      e.preventDefault()
+      var name = document.getElementById('name').value
+      var email = document.getElementById('email').value
+      var message = document.getElementById('message').value
+      fetch("https://gelila.pythonanywhere.com/",{ 
+        mode: 'no-cors',
+        headers: {
+          'content-type': 'application/json' 
+        },
+        method: 'POST',
+        body: JSON.stringify({name, email, message})        
+      }).then(res => {
+        document.getElementById('name').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('message').value = ''
+        document.querySelector('.message').classList.remove('hidden')
+        setTimeout(() => {
+          document.querySelector('.message').classList.add('hidden')
+        }, 3000)
+      }).catch(err => {
+        console.log(err)
+        alert('Message not sent')
+      });
+    }
+
+    document.getElementById('form').addEventListener('submit', submit)
+  </script>
 </html>
