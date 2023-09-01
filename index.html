@@ -185,7 +185,6 @@
 
   <script>
     function submit(e){
-      console.log('sd')
       console.log(JSON.stringify({name: document.getElementById('name').value, 
         email: document.getElementById('email').value, 
         message: document.getElementById('message').value
@@ -194,7 +193,7 @@
       var name = document.getElementById('name').value
       var email = document.getElementById('email').value
       var message = document.getElementById('message').value
-      fetch("https://gelila.pythonanywhere.com/",{ 
+      fetch("https://Yobek.pythonanywhere.com/",{ 
         mode: 'no-cors',
         headers: {
           'content-type': 'application/json' 

@@ -7,9 +7,6 @@ app = Flask(__name__)
 
 @app.route('/', methods=["POST", "GET"])
 def hello_world():
-    print('adf')
-    print(request.content_type)
-    print(request.data)
 
     f = request.get_json(force=True)
 
