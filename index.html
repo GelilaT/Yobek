@@ -11,8 +11,8 @@
   <body>
     <header id="logo">
       <div class="nav_container">
-        <h1 id="container__brand">YOBEK</h1>
         <nav class="navigation">
+          <h1 id="container__brand">YOBEK</h1>
           <div class="navigation_list">
             <ul>
               <li class="navigation__list--link">
@@ -25,6 +25,9 @@
                 <a class="navigation__list--other" href="#projects">PROJECTS</a>
               </li>
             </ul>
+          </div>
+
+          <div class="navigation_list">
             <ul>
               <li class="navigation__list--icon">
                 <a
@@ -45,8 +48,30 @@
             </ul>
           </div>
         </nav>
+        <hr class="custom__line" />
+
+        <div class="mobile_nav_container">
+          <h1 id="container__brand">YOBEK</h1>
+          <div id="toggle-nav-bar" class="toggle-nav-bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <ul class="mobile_navigation_list">
+            <li class="mobile_navigation_list__item">
+              <a class="navigation__list--first" href="index.html">HOME</a>
+            </li>
+            <li class="mobile_navigation_list__item">
+              <a class="navigation__list--other" href="#about">ABOUT</a>
+            </li>
+            <li class="mobile_navigation_list__item">
+              <a class="navigation__list--other" href="#projects">PROJECTS</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <hr class="custom__line" />
+
       <section class="on_bg">
         <div class="container">
           <h1>Making your realty dreams a reality</h1>
@@ -71,7 +96,7 @@
         </div>
         <div class="about__mid">
           <i class="fa fa-check-circle" aria-hidden="true"></i>
-          <h2>Company Professional</h2>
+          <h2>Professional Company</h2>
           <p>
             We are a professional company based in Ethiopia and have assisted
             many clients.
@@ -91,25 +116,37 @@
         We have completed various projects from all of our clients, <br />we do
         everything well
       </p>
-      <div class="col row-md gap-5">
+      <div class="col row-md gap-10-md">
         <div class="col gap-5">
           <div class="img-container">
-            <span class="caption">Project<br />title</span>
+            <span class="caption"
+              >Project<br />
+              title</span
+            >
             <img src="images/img5.jpg" alt="a beautiful building" />
           </div>
           <div class="img-container">
-            <span class="caption">Project<br />title</span>
+            <span class="caption"
+              >Project<br />
+              title</span
+            >
             <img src="images/img3.jpg" alt="a beautiful building" />
           </div>
           <div class="vertical-spacer"></div>
         </div>
         <div class="col gap-5">
           <div class="img-container">
-            <span class="caption">Project<br />title</span>
+            <span class="caption"
+              >Project<br />
+              title</span
+            >
             <img src="images/img4.jpg" alt="a beautiful building" />
           </div>
           <div class="img-container">
-            <span class="caption">Project<br />title</span>
+            <span class="caption"
+              >Project<br />
+              title</span
+            >
             <img src="images/img2.jpg" alt="a beautiful building" />
           </div>
         </div>
@@ -120,7 +157,11 @@
     <footer class="footer">
       <div class="footer-flex">
         <!-- Footer Column One -->
-        <div class="footer-column" id="col-one" style="position: relative; z-index: 10">
+        <div
+          class="footer-column"
+          id="col-one"
+          style="position: relative; z-index: 10"
+        >
           <h2 class="footer-h2">Yobek</h2>
           <p class="footer-desc">
             Property consultant who focuses on client orientation in realizing
@@ -141,7 +182,7 @@
 
         <div class="footer-column">
           <h2 id="footer_contact" class="footer-h2">Contact Us</h2>
-          <form id="form"  class="contact-form">
+          <form id="form" class="contact-form">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" class="contact-input" />
             <label for="email">Phone Number</label>
@@ -167,7 +208,9 @@
         <!-- Footer Copyright -->
         <div class="copyright-row">
           <div>
-            <p style="position: relative; z-index: 10">Copy rights &copy; 2023 Yobek Properties. All rights reserved</p>
+            <p style="position: relative; z-index: 10">
+              Copy rights &copy; 2023 Yobek Properties. All rights reserved
+            </p>
           </div>
 
           <div class="footer-icons">
@@ -184,36 +227,51 @@
   </body>
 
   <script>
-    function submit(e){
-      console.log(JSON.stringify({name: document.getElementById('name').value, 
-        email: document.getElementById('email').value, 
-        message: document.getElementById('message').value
-      }))
-      e.preventDefault()
-      var name = document.getElementById('name').value
-      var email = document.getElementById('email').value
-      var message = document.getElementById('message').value
-      fetch("https://Yobek.pythonanywhere.com/",{ 
-        mode: 'no-cors',
+    function submit(e) {
+      console.log(
+        JSON.stringify({
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        })
+      );
+      e.preventDefault();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      fetch("https://Yobek.pythonanywhere.com/", {
+        mode: "no-cors",
         headers: {
-          'content-type': 'application/json' 
+          "content-type": "application/json",
         },
-        method: 'POST',
-        body: JSON.stringify({name, email, message})        
-      }).then(res => {
-        document.getElementById('name').value = ''
-        document.getElementById('email').value = ''
-        document.getElementById('message').value = ''
-        document.querySelector('.message').classList.remove('hidden')
-        setTimeout(() => {
-          document.querySelector('.message').classList.add('hidden')
-        }, 3000)
-      }).catch(err => {
-        console.log(err)
-        alert('Message not sent')
-      });
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+      })
+        .then((res) => {
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          document.querySelector(".message").classList.remove("hidden");
+          setTimeout(() => {
+            document.querySelector(".message").classList.add("hidden");
+          }, 3000);
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Message not sent");
+        });
     }
 
-    document.getElementById('form').addEventListener('submit', submit)
+    document.getElementById("form").addEventListener("submit", submit);
+
+    document.getElementById("toggle-nav-bar").addEventListener("click", () => {
+      document
+        .querySelector(".mobile_navigation_list")
+        .classList.toggle("mobile_navigation_list--expanded");
+
+      document
+        .querySelector(".toggle-nav-bar")
+        .classList.toggle("toggle-nav-bar-expanded");
+    });
   </script>
 </html>
