@@ -15,7 +15,7 @@ def hello_world():
     message = f['message']
 
     requests.get(
-        f"https://api.telegram.org/bot6664967345:AAHNTpkk9xUYFzz-oOoUWXHwZZGMIHFcBG4/sendMessage?chat_id=5410094610&text={name}+{email}+{message}")
+        f"https://api.telegram.org/bot6664967345:AAHNTpkk9xUYFzz-oOoUWXHwZZGMIHFcBG4/sendMessage?chat_id=5501736457&text={name}+{email}+{message}")
 
     return 'Hello from Flask!'
 

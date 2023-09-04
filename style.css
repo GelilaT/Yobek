@@ -160,7 +160,7 @@ header .navigation_list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 5%;
   margin: auto;
 }
 .custom__line--about {
@@ -174,7 +174,7 @@ header .navigation_list {
   clip-path: polygon(38% 18%, 100% 0, 100% 100%, 0 100%, 0% 50%);
 }
 .about__mid .about__right {
-  padding-left: 40px;
+  padding-left: 40%;
 }
 .about__mid i,
 .about__right i {
@@ -352,9 +352,10 @@ section {
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  /* width: 100%; */
   margin-bottom: 1rem;
   z-index: 10;
+  gap: 20%;
 }
 
 .contact-input {
@@ -369,6 +370,7 @@ section {
   overflow: auto;
   resize: none;
   background-color: #e7e8eb;
+  border-radius: 1rem;
   /* color: var(--white); */
 }
 
@@ -378,6 +380,7 @@ section {
   background-color: #6b6b6b;
   border: none;
   border-radius: 1rem;
+  margin-top: 2rem;
 }
 
 .btn:hover {
@@ -506,7 +509,10 @@ section {
     gap: 2rem;
     text-align: center;
   }
-
+  .about__left img {
+    clip-path: none;
+    max-width: 80%;
+  }
   .custom__line {
     display: none;
   }
